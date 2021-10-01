@@ -5,73 +5,81 @@
 int op;
 char nome[MAX];
 
+int gerenciaMorador()
+{
 
-int gerenciaMorador(){
+    do
+    {
+        system("clear");
+        printf("...::: GERENCIA MORADOR:::...");
+        printf("\n [1] - Cadastrar novo morador");
+        printf("\n [2] - Excluir morador");
+        printf("\n [3] - Gerenciar permissoes de morador");
+        printf("\n [4] - Listar todos os moradores");
+        printf("\n [0] - Voltar");
+        printf("\n\n");
+        printf("Escolha sua opcao - > ");
+        scanf("%i", &op);
 
-    do{
-    system("clear");
-    printf("...::: GERENCIA MORADOR:::...");
-    printf("\n [1] - Cadastrar novo morador");
-    printf("\n [2] - Excluir morador");
-    printf("\n [3] - Gerenciar permissoes de morador");
-    printf("\n [4] - Listar todos os moradores");
-    printf("\n [0] - Voltar");
-    printf("\n\n");
-    printf("Escolha sua opcao - > ");
-    scanf("%i", &op);
+        switch (op)
+        {
+        case 1:
+            printf("\n Insira o nome do morador");
+            scanf("%s", &nome);
+            break;
+        case 2:
+            printf("\n Insira o nome do morador que deseja excluir");
+            break;
+        case 3:
+            printf("\n Gerenciar permissoes");
+            break;
+        default:
+            printf("\n Opcao invalida, digite outro numero");
+        }
 
-    switch (op){
-    case 1:
-        printf("\n Insira o nome do morador");
-        scanf("%s", &nome);
-    break;
-    case 2:
-        printf("\n Insira o nome do morador que deseja excluir");
-    break;
-    case 3:
-        printf("\n Gerenciar permissoes");
-    break;
-    default:
-        printf("\n Opcao invalida, digite outro numero");
     }
-
-    } while (op != 0);
+    while (op != 0);
 }
-int gerenciaVisitante(){
+int gerenciaVisitante()
+{
 
-    do{
-    system("clear");
-    printf("...::: GERENCIA VISITANTE:::...");
-    printf("\n [1] - Cadastrar novo visitante");
-    printf("\n [2] - Excluir visitante");
-    printf("\n [3] - Exibir lista de visitantes");
-    printf("\n [4] - Gerenciar permissoes do visitante");
-    printf("\n [0] - Voltar");
-    printf("\n\n");
-    printf("Escolha sua opcao: - > ");
-    scanf("%i", &op);
+    do
+    {
+        system("clear");
+        printf("...::: GERENCIA VISITANTE:::...");
+        printf("\n [1] - Cadastrar novo visitante");
+        printf("\n [2] - Excluir visitante");
+        printf("\n [3] - Exibir lista de visitantes");
+        printf("\n [4] - Gerenciar permissoes do visitante");
+        printf("\n [0] - Voltar");
+        printf("\n\n");
+        printf("Escolha sua opcao: - > ");
+        scanf("%i", &op);
 
-    switch (op){
-    case 1:
-        printf("\n Insira o nome do Visitante");
-        scanf("%s", &nome);
-    break;
-    case 2:
-        printf("\n Insira o nome do visitante que deseja excluir");
-    break;
-    case 3:
-        printf("\n Listar visitantes aqui...");
-    break;
-    case 4:
-        printf("\n Gerenciar permissoes");
-    break;
-    default:
-        printf("\n Opcao invalida, digite outro numero");
+        switch (op)
+        {
+        case 1:
+            printf("\n Insira o nome do Visitante");
+            scanf("%s", &nome);
+            break;
+        case 2:
+            printf("\n Insira o nome do visitante que deseja excluir");
+            break;
+        case 3:
+            printf("\n Listar visitantes aqui...");
+            break;
+        case 4:
+            printf("\n Gerenciar permissoes");
+            break;
+        default:
+            printf("\n Opcao invalida, digite outro numero");
+        }
+
     }
-
-    }while (op != 0);
+    while (op != 0);
 }
-int gerenciaPermissao(){
+int gerenciaPermissao()
+{
 
     system("clear");
     printf("...::: GERENCIA PERMISSOES:::...");
@@ -82,36 +90,41 @@ int gerenciaPermissao(){
     scanf("%i", &op);
 
 }
-int pesquisa(){
+int pesquisa()
+{
 
-    do{
-    system("clear");
-    printf("...::: PESQUISA :::...");
-    printf("\n[1] - Listar todos Moradores");
-    printf("\n[2] - Listar todos Visitantes");
-    printf("\n[2] - Listar todos Pets");
-    printf("\n[0] - Voltar");
-    printf("\n\n");
-    printf("Escolha sua opcao: - > ");
-    scanf("%i", &op);
+    do
+    {
+        system("clear");
+        printf("...::: PESQUISA :::...");
+        printf("\n[1] - Listar todos Moradores");
+        printf("\n[2] - Listar todos Visitantes");
+        printf("\n[2] - Listar todos Pets");
+        printf("\n[0] - Voltar");
+        printf("\n\n");
+        printf("Escolha sua opcao: - > ");
+        scanf("%i", &op);
 
-    switch (op){
-    case 1:
-        printf("\n Listar moradores aqui...");
-    break;
-    case 2:
-        printf("\n Listar visitantes aqui...");
-    break;
-    case 3:
-       printf("\n Listar pets aqui...");
-    break;
-    default:
-        printf("\n Opcao invalida, digite outro numero");
+        switch (op)
+        {
+        case 1:
+            printf("\n Listar moradores aqui...");
+            break;
+        case 2:
+            printf("\n Listar visitantes aqui...");
+            break;
+        case 3:
+            printf("\n Listar pets aqui...");
+            break;
+        default:
+            printf("\n Opcao invalida, digite outro numero");
+        }
+
     }
-
-    }while (op != 0);
+    while (op != 0);
 }
-int cftv(){
+int cftv()
+{
     system("clear");
     printf("...:::CFTV:::...");
     printf("\n[1] - Status");
@@ -119,7 +132,8 @@ int cftv(){
     printf("\nEscolha sua opcao -> ");
     scanf("%i", &op);
 }
-int veiculos(){
+int veiculos()
+{
     system("clear");
     printf("...:::VEICULOS:::...");
     printf("\n [1] - Cadastrar veiculo");
@@ -129,86 +143,135 @@ int veiculos(){
     printf("\n Escolha sua opcao -> ");
     scanf("%i", &op);
 }
-int pets(){
-char nomePet[MAX];
-char tipoPet[MAX];
-char sexoPet;
-char caracteristicaPet [MAX];
+int pets()
+{
+    char nomePet[MAX];
+    char tipoPet[MAX];
+    char sexoPet;
+    char caracteristicaPet [MAX];
 
-    do{
-    system("clear");
-    printf("...:::PETS:::...");
-    printf("\n [1] - Cadastrar Pets");
-    printf("\n [2] - Remover Pets");
-    printf("\n [3] - Listar Pets");
-    printf("\n [4] - Voltar");
-    printf("\nEscolha sua opcao -> ");
-    scanf("%i", &op);
+    do
+    {
+        system("clear");
+        printf("...:::PETS:::...");
+        printf("\n [1] - Cadastrar Pets");
+        printf("\n [2] - Remover Pets");
+        printf("\n [3] - Listar Pets");
+        printf("\n [4] - Voltar");
+        printf("\nEscolha sua opcao -> ");
+        scanf("%i", &op);
 
-    switch (op){
-    case 1:
-        printf("\n Insira o nome do PET");
-        scanf("%s", &nomePet);
-        printf("\n Insira o tipo de PET (ex: cachorro, gato, cobra,etc...)");
-        scanf("%s", &tipoPet);
-        printf("\n Insira o sexo do PET");
-        scanf("%c", &sexoPet);
-        printf("\n Insira uma caracteristica para identificacao do PET:");
-        scanf("%c", &caracteristicaPet);
+        switch (op)
+        {
+        case 1:
+            printf("\n Insira o nome do PET");
+            scanf("%s", &nomePet);
+            printf("\n Insira o tipo de PET (ex: cachorro, gato, cobra,etc...)");
+            scanf("%s", &tipoPet);
+            printf("\n Insira o sexo do PET");
+            scanf("%c", &sexoPet);
+            printf("\n Insira uma caracteristica para identificacao do PET:");
+            scanf("%c", &caracteristicaPet);
 
-    break;
-    case 2:
-        printf("\n Insira o nome do morador que deseja excluir");
-    break;
-    case 3:
-        printf("\n Gerenciar permissoes");
-    break;
-    default:
-        printf("\n Opcao invalida, digite outro numero");
+            break;
+        case 2:
+            printf("\n Exclir PET");
+            break;
+        case 3:
+            printf("\n Listar PET'S");
+            break;
+        default:
+            printf("\n Opcao invalida, digite outro numero");
+        }
+
     }
-
-    } while (op != 0);
+    while (op != 0);
 }
-int defesa(){
+int defesa()
+{
 
-    do{
-    system("clear");
-    printf("...::: DEFESA:::...");
-    printf("\n [1] - Modo Viagem");
-    printf("\n [2] - Modo noite");
-    printf("\n [0] - Voltar");
-    printf("\nEscolha sua opcao -> ");
-    scanf("%i", &op);
+    do
+    {
+        system("clear");
+        printf("...::: DEFESA:::...");
+        printf("\n [1] - Modo Viagem");
+        printf("\n [2] - Modo Noturno");
+        printf("\n [3] - Modo Diurno");
+        printf("\n [4] - Modo Manutencao");
+        printf("\n [5] - Teste de Alarmes " )
+        printf("\n [0] - Voltar");
+        printf("\nEscolha sua opcao -> ");
+        scanf("%i", &op);
 
-    switch (op){
-    case 1:
-        printf("\n Modo viagem ativado com sucesso...");
-    break;
-    case 2:
-        printf("\n Modo noite ativado com sucesso...");
-    break;
-    default:
-        printf("\n Opcao invalida, digite outro numero");
+        switch (op)
+        {
+        case 1:
+            printf("\n Modo viagem ativado com sucesso...");
+            break;
+        case 2:
+            printf("\n Modo noite ativado com sucesso...");
+            break;
+        case 3:
+            printf("\n Modo diurno ativado com sucesso...");
+            break;
+        case 4:
+            printf("\n Modo manutencao ativado com sucesso...");
+            break;
+        default:
+            printf("\n Opcao invalida, digite outro numero");
+        }
     }
-
-    } while (op != 0);
+    while (op != 0);
 }
-int recursos(){
+int recursos()
+{
+    do{
     system("clear");
     printf("...::: RECURSOS:::...");
-    printf("\n [1] - Niveis Reservatorio agua da chuva");
+    printf("\n [1] - Niveis dos Reservatorios de agua da chuva");
     printf("\n [2] - Temperatura da casa");
     printf("\n [3] - Analítico Horta");
     printf("\n [4] - Analítico Peixes");
-    printf("Escolha sua opcao -> ");
+    printf("\n [5] - Baterias");
+    printf("\n Escolha sua opcao -> ");
     scanf("%i", &op);
 
+    switch (op){
+        case 1:
+            printf("\n Reservatorio 1: 30%%");
+        break;
+        case 2:
+            printf("\n Cozinha/Sala de Estar: 26C");
+            printf("\n Quarto Casal : 17C");
+            printf("\n Oficina: 33C");
+            printf("\n Area externa: 36C");
+        break;
+        case 3:
+            printf("\Informacoes da horta: ;;;");
+        break;
+        case 4:
+            printf("\Informacoes dos peixes: ;;;");
+        break;
+        case 5:
+            printf("\n Central: 99%% - Carregando...");
+            printf("\n Horta: 99%% - Carregando...");
+            printf("\n Peixes: 99%% - Carregando...");
+            printf("\n Painel Solar: 99%% - Carregando...");
+            printf("\n Cerca Eletrica: 99%% - Carregando...");
+            printf("\n CFTV: 99%% - Carregando...");
+        break;
+        default:
+            printf("\n Opcao invalida, selecione outra opcao");
+    }
+}while(op != 0);
 }
-int main(void){
+int main(void)
+{
 
     int opcao;
 
-    do{
+    do
+    {
         system("clear");
         printf("\n DIGITO       ACAO");
         printf("\n [1] - Gerenciar morador");
@@ -225,23 +288,40 @@ int main(void){
         printf("Escolha sua opcao: ");
         scanf("%i", &opcao);
 
-        if(opcao == 1){
+        if(opcao == 1)
+        {
             gerenciaMorador();
-        }else if(opcao == 2){
+        }
+        else if(opcao == 2)
+        {
             gerenciaVisitante();
-        }else if(opcao == 3){
+        }
+        else if(opcao == 3)
+        {
             pesquisa();
-        }else if(opcao == 4){
+        }
+        else if(opcao == 4)
+        {
             veiculos();
-        }else if(opcao == 5){
+        }
+        else if(opcao == 5)
+        {
             pets();
-        }else if(opcao == 6){
+        }
+        else if(opcao == 6)
+        {
             cftv();
-        }else if(opcao == 7){
+        }
+        else if(opcao == 7)
+        {
             defesa();
-        }else if(opcao == 8){
+        }
+        else if(opcao == 8)
+        {
             recursos();
-        }else if (opcao == 0){
+        }
+        else if (opcao == 0)
+        {
             system("clear");
             printf("OBRIGADO!!!");
             printf("\n\n");
@@ -251,7 +331,8 @@ int main(void){
             printf("\n Opcao invalida, tente novamente...");
 
         system("break");
-    } while(opcao != 0);
+    }
+    while(opcao != 0);
 }
 
 
