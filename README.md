@@ -1,2 +1,2 @@
 # ResidenciaFamiliaTorres
-Um simples projeto com o intuito de gerenciar a minha residencia.
+Um simples projeto com o intuito de gerenciarfuncoes básicas da minha residencia.
